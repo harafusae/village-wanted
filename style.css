@@ -106,6 +106,10 @@ font-family:"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", 
 font-family: 'Fjalla One', sans-serif;
 }
 
+.autobr {
+  display: inline-block;
+}
+
 /*------------------------
 * COMMON
 ------------------------*/
@@ -117,10 +121,14 @@ font-family: 'Fjalla One', sans-serif;
   font-size: 2.0rem;
   text-decoration: none;
   color: #FFF;
+  transition: all .3s;
 }
 
 .btn a:hover{
-  background-color: #000;
+  background-color: #FFF;
+  border: 3px solid #ff3333;
+  box-shadow: none;
+  color: #ff3333;
 }
 
 .red {
@@ -303,6 +311,7 @@ font-family: 'Fjalla One', sans-serif;
 .sec_welcome_badgeList_item {
   display: inline-block;
   padding: 0 15px;
+  margin-bottom: 1.8em;
 }
 
 .sec_welcome_badgeList_item img{
@@ -314,7 +323,7 @@ font-family: 'Fjalla One', sans-serif;
 * sec_Wanted
 ------------------------*/
 .sec_wanted {
-  width:1132px;
+  max-width:1132px;
   margin: 0 auto;
   margin-bottom: 54px;
 }
@@ -330,7 +339,8 @@ font-family: 'Fjalla One', sans-serif;
   background-color: #e5e5e5;
   text-align: center;
   margin-left: 32px;
-  padding: 48px 30px 32px;
+  padding: 4% 3.2% 3.2%;
+  /*padding: 48px 30px 32px;*/
   border-radius: 8px;
 }
 
@@ -348,17 +358,22 @@ font-family: 'Fjalla One', sans-serif;
   color: #FFF;
   font-size: 3.0rem;
   line-height: 54px;
+  text-align: center;
 }
 
 .sec_wanted_typeList_item img{
-  width:178px;
-  height:149px;
+  width: 100%;
+  box-sizing: border-box;
+  /*max-width:178px;
+  height:149px;*/
+  /*overflow: hidden;*/
 }
 
 .sec_wanted_typeList_item_title {
   margin-bottom: 20px;
   font-size: 1.8rem;
   line-height: 1.5;
+  height: 64px;
 }
 
 .sec_wanted_text_caption {
@@ -399,7 +414,7 @@ font-family: 'Fjalla One', sans-serif;
 * sec_Photos
 ------------------------*/
 .sec_photos {
-  width:600px;
+  max-width:600px;
   margin: 0 auto;
   margin-top: 32px;
   padding-bottom: 122px;
@@ -474,14 +489,33 @@ font-family: 'Fjalla One', sans-serif;
 
 .sec_contact_adrBlock,
 .sec_contact_mapBlock {
-  width: 42%;
+  width: 48%;
   display: inline-block;
-  margin: 0 16px;
   vertical-align: top;
 }
 
 .sec_contact_mapBlock {
-  padding-left: 54px;
+  /*position: relative;*/
+  margin: 0 auto;
+}
+
+.sec_contact_mapBlock .iframeWrap{
+  position: relative;
+  height: 0;
+  padding-bottom: 70%;
+  overflow: hidden;
+}
+
+.sec_contact_mapBlock iframe{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sec_contact_adrBlock {
+  padding: 0 3%;
 }
 
 .sec_contact_address_title {
@@ -552,14 +586,11 @@ font-family: 'Fjalla One', sans-serif;
 *
 ------------------------*/
 
-@media screen and (max-width: 320px) and (max-width: 480px) {
-.header {
-    width: 320px;
-    height: 480px;
-  }
-}
-
 @media only screen and (max-width:940px){
+
+  .btn a {
+    font-size: 2.8vmin;
+  }
 
   .header_menu {
     display: none;
@@ -574,12 +605,53 @@ font-family: 'Fjalla One', sans-serif;
     height: 600px;
   }
 
+  .sec_welcome,
+  .sec_wanted,
+  .sec_contact  {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
   .sec_welcome_leadtxt-big {
     font-size: 4.8vmin;
   }
 
   .sec_welcome_leadtxt-mid {
-    font-size: 2.4vmin;
+    font-size: 1.8rem;
+    border: 3px solid #ff3333;
+    padding: 5% 8%;
+    height: 20%;
+  }
+
+  .sec_welcome_leadtxt-mid span{
+    border: none;
+  }
+
+  .sec_welcome_badgeList_item {
+    padding: 0;
+  }
+
+  .sec_wanted_typeList_item {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 4%;
+    padding: 5%;
+  }
+
+  .sec_wanted_typeList_item::before {
+    top: 8%;
+    left: 3%;
+  }
+
+  .sec_wanted_typeList_item img{
+    width: 48%;
+  }
+
+  .sec_wanted_typeList_item_title {
+    margin: 0 0 0 4%;
+    width: 48%;
+    float: right;
   }
 
   .sec_system {
@@ -595,10 +667,46 @@ font-family: 'Fjalla One', sans-serif;
     border-top: 1px solid #b5b5b5;
   }
 
+  .sec_contact_inner {
+    padding: 0;
+  }
+
 
   .sec_contact_adrBlock,
   .sec_contact_mapBlock {
     width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8%;
+  }
+
+  .sec_contact_mapBlock {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 320px) and (max-width: 480px) {
+.header {
+    width: 320px;
+    height: 480px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+.sec_wanted_typeList_item {
+  margin-bottom: 4%;
+}
+
+.sec_wanted_typeList_item::before {
+  display: none;
+}
+
+.sec_wanted_typeList_item_title {
+    width: 100%;
+    float: none;
   }
 
 }
