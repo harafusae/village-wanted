@@ -1,12 +1,4 @@
 
-// Opening
-$('head').append(
-'<style type="text/css">.join_logo {display:none;}'
-);
-$(window).load(function() {
-$('.join_logo').fadeIn("8000");
-});
-
 //Sec_photos
 $(document).ready(function(){
 
