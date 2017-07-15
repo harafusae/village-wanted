@@ -142,7 +142,7 @@ font-family: 'Fjalla One', sans-serif;
   position: relative;
   width:100%;
   height:100vh;
-  background-image: url(img/bg_header.png);
+  background: url(img/bg_header.png);
   background-size: cover; /*画面全体を覆う*/
   background-position: center;
 }
@@ -200,6 +200,22 @@ font-family: 'Fjalla One', sans-serif;
   height: 381px;
   top: calc(50% - 190px);
   left: calc(50% - 321px);
+}
+
+.join_logo-sp {
+  display: none;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin:auto;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(img/img_sp_joinlogo.png) center center no-repeat;
+  background-size: 80% auto;
+  z-index: 2;
 }
 
 /*------------------------
@@ -382,7 +398,12 @@ font-family: 'Fjalla One', sans-serif;
 /*------------------------
 * sec_Photos
 ------------------------*/
-
+.sec_photos {
+  width:600px;
+  margin: 0 auto;
+  margin-top: 32px;
+  padding-bottom: 122px;
+}
 
 
 /*------------------------
@@ -539,6 +560,27 @@ font-family: 'Fjalla One', sans-serif;
 }
 
 @media only screen and (max-width:940px){
+
+  .header_menu {
+    display: none;
+  }
+
+  .join_logo {
+    display: none;
+  }
+
+  .join_logo-sp {
+    display: block;
+    height: 600px;
+  }
+
+  .sec_welcome_leadtxt-big {
+    font-size: 4.8vmin;
+  }
+
+  .sec_welcome_leadtxt-mid {
+    font-size: 2.4vmin;
+  }
 
   .sec_system {
     width: 88%;

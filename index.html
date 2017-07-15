@@ -15,13 +15,13 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="lib/jquery.bxslider.css" rel="stylesheet" />
 </head>
 <body>
   <!-- HEADER -->
-  <header class="header header_flex">
+  <header class="header header_flex slider">
 
     <div class="header_var">
-
       <!--RYOZAN logo-->
       <a class="header_rlogo" href="http://ryozanpark.jp/" target="_blank">
         <img src="img/header_rlogo.png" alt="RYOZAN PARK">
@@ -47,8 +47,12 @@
     <!-- ./PC_nav-->
 
     <div class="join_logo">
-      <h1><img src="img/img_joinlogo.svg" width="643" height="381" alt="【急募】こそだてビレッジ　新メンバー　JOIN US!"></h1>
+      <img src="img/img_joinlogo.svg" width="643" height="381" alt="【急募】こそだてビレッジ　新メンバー　JOIN US!">
     </div>
+    <h1 class="join_logo-sp">【急募】こそだてビレッジ　新メンバー　JOIN US!</h1>
+
+    <!-- <div class="bg_slide" style="background-image: url(img/bg_header.png);"></div> -->
+
 
   </header><!-- ./HEADER -->
 
@@ -135,8 +139,15 @@
             <h2 class="sec_title">PHOTOS</h2>
             <h3 class="sec_title-cap">フォトギャラリー</h3>
 
-                <!---///JQUERY //--->
-                <img src="img/photosdummy.jpg">
+            <ul class="photo_slider">
+              <li><img src="img/slide/01.png"    title="お子様は明るいキッズスペースで1日を過ごします"/></li>
+              <li><img src="img/slide/02.png" title="お外ではいつも都電に会えます"/></li>
+              <li><img src="img/slide/03.png"  title="時には大人の隣でお仕事をすることも"/></li>
+              <li><img src="img/slide/04.png"  title="絵具でお絵描きの時間"/></li>
+              <li><img src="img/slide/05.png"  title="お昼ごはんはママと一緒に"/></li>
+              <li><img src="img/slide/06.png"  title="基本的に午前は毎日、外遊び！"/></li>
+              <li><img src="img/slide/07.png"  title="RYOZAN PARK 恒例、大運動会"/></li>
+            </ul>
 
           </section><!-- ./sec_photos -->
 
@@ -201,10 +212,9 @@
   </div>
 
 
-
-
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="sample.js">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/common.js"></script>
 
 </body>
 </html>
