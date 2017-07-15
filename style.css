@@ -10,7 +10,6 @@ Twitter: @rich_clark
 *:before,
 *:after {
   box-sizing: border-box;
-  transition: 0.5s ease-in-out;
 }
 
 html, body, div, span, object, iframe,
@@ -145,6 +144,9 @@ font-family: 'Fjalla One', sans-serif;
 /*------------------------
 * HEADER
 ------------------------*/
+.body {
+  display: none;
+}
 
 .header {
   position: relative;
