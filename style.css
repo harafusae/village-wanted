@@ -349,7 +349,6 @@ font-family: 'Fjalla One', sans-serif;
 
 .sec_wanted_typeList_item::before {
   content: url(img/check.png);
-  /*content: '\f00c';*/
   position: absolute;
   top: -28px;
   left:calc(50% - 28px);
@@ -368,9 +367,6 @@ font-family: 'Fjalla One', sans-serif;
 .sec_wanted_typeList_item img{
   width: 100%;
   box-sizing: border-box;
-  /*max-width:178px;
-  height:149px;*/
-  /*overflow: hidden;*/
 }
 
 .sec_wanted_typeList_item_title {
