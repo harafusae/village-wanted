@@ -262,6 +262,7 @@ font-family: 'Fjalla One', sans-serif;
   text-align: center;
   font-weight: normal;
   letter-spacing: 0.2em;
+  line-height: 1.5;
 }
 
 /*------------------------
@@ -347,7 +348,8 @@ font-family: 'Fjalla One', sans-serif;
 }
 
 .sec_wanted_typeList_item::before {
-  content: '\f00c';
+  content: url(img/check.png);
+  /*content: '\f00c';*/
   position: absolute;
   top: -28px;
   left:calc(50% - 28px);
@@ -591,7 +593,11 @@ font-family: 'Fjalla One', sans-serif;
 @media only screen and (max-width:940px){
 
   .btn a {
-    font-size: 2.8vmin;
+    font-size: 1.6rem;
+  }
+
+  .text_caption  {
+    letter-spacing: 0;
   }
 
   .header_menu {
@@ -614,6 +620,10 @@ font-family: 'Fjalla One', sans-serif;
     margin-right: 8%;
   }
 
+  .sec_welcome {
+    padding-top: 8%;
+  }
+
   .sec_welcome_leadtxt-big {
     font-size: 4.8vmin;
   }
@@ -627,6 +637,10 @@ font-family: 'Fjalla One', sans-serif;
 
   .sec_welcome_leadtxt-mid span{
     border: none;
+  }
+
+  .sec_welcome_p {
+    letter-spacing: 0;
   }
 
   .sec_welcome_badgeList_item {
@@ -667,6 +681,22 @@ font-family: 'Fjalla One', sans-serif;
   }
   .sec_system_table tr:first-child {
     border-top: 1px solid #b5b5b5;
+  }
+
+
+  .concept_leadtxt-big {
+    font-size:2.4rem;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .concept_leadtxt-middle {
+    font-size:1.8rem;
+    text-align: left;
+  }
+
+  .sec_concept_text {
+    letter-spacing: 0;
   }
 
   .sec_contact_inner {

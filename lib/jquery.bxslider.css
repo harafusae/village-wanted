@@ -3,7 +3,7 @@
 /** RESET AND LAYOUT
 ===================================*/
 .bx-wrapper {
-  width: 592px;
+  width: 100%;
   position: relative;
   margin-top:32px;
   padding: 0;
@@ -12,7 +12,7 @@
   touch-action: pan-y;
 }
 .bx-wrapper img {
-  /*width: 592px;*/
+  width: 100%;
   display: block;
 }
 .bxslider {
